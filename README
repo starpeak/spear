@@ -1,13 +1,40 @@
-Spar
-====
+Spear
+=====
 
-Introduction goes here.
+Spear (StarPeak Extended ActiveRecord) is a Ruby on Rails plugin that provides
+the most needed things like delete flag, versioning and I18n support.
+
+I know there are many different plugins that do exactly the same things - but it
+is always a pain to combine them.
+
+At the moment there is only delete flag support, but more will follow soon.
 
 
-Example
-=======
+Installation
+============
 
-Example goes here.
+Just as any plugin here on github:
+
+script/plugin install git://github.com/starpeak/spear.git
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Examples
+========
+
+Delete Flag
+-----------
+
+To use delete flag extension you just add one line to your model:
+
+class Page < ActiveRecord::Base
+  spear_delete_flag
+
+  # Your model as used to be
+end
+
+At the moment you will have to add a column 'deleted_at' to your model in an
+migration you have to write. This will be improved soon.
+
+
+
+Copyright (c) 2009 Sven G. Brönstrup (StarPeak), released under the MIT license
